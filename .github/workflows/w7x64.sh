@@ -8,7 +8,7 @@ read -p "Ctrl + V Authtoken: " CRP
 ./ngrok authtoken $CRP 
 nohup ./ngrok tcp 3389 &>/dev/null &
 echo Downloading File From akuh.net
-apt-get install qemu-system-x86 -y
+apt-get install qemu-system-x86_64 -y
 echo "Wait"
 echo "Starting Windows"
 qemu-system-x86_64 -hda w7x64.img -m 4G -smp cores=4 -net user,hostfwd=tcp::3389-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic &>/dev/null &
