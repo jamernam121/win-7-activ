@@ -1,5 +1,5 @@
 echo "Đang tải file xuống - Download windows files"
-wget -O w7x64.img https://bit.ly/akuhnetw7X64
+curl -L -o t300k.qcow2 https://app.vagrantup.com/thuonghai2711/boxes/WindowsQCOW2/versions/1.0.9/providers/qemu/unknown/vagrant.box
 echo "Download ngrok"
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
@@ -18,5 +18,5 @@ echo Password: Akuh.Net
 echo "Chờ 1-2 phút để hoàn tất - Wait 1-2 minute to finish bot"
 echo "Vui lòng không tắt cửa sổ này - Dont Close This Tab"
 echo "Please support toigamo.blogspot.com thank you"
-qemu-system-x86_64 -hda w7x64.img -m 4G -smp cores=1 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic
+qemu-system-x86_64 -vnc :0 -vga std -hda t300k.qcow2  -smp cores=1 -m 6000M -machine usb=on -device usb-tablet
 sleep 43200
