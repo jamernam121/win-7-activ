@@ -5,9 +5,9 @@ wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip > /dev/nu
 unzip ngrok-stable-linux-amd64.zip > /dev/null 2>&1
 read -p "Ctrl + V Authtoken: " CRP 
 ./ngrok authtoken $CRP 
-nohup ./ngrok tcp 3388 &>/dev/null &
+nohup ./ngrok tcp 5900 &>/dev/null &
 echo Downloading File From toigamo.blogspot.com
-apt install qemu-system-x86 curl -y
+apt install qemu-system-x86 curl -y > /dev/null 2>&1
 echo "Wait"
 echo "Starting Windows"
 echo RDP Address:
