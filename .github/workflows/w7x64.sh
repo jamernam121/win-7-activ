@@ -18,5 +18,5 @@ echo Password: Akuh.Net
 echo "Chờ 1-2 phút để hoàn tất - Wait 1-2 minute to finish bot"
 echo "Vui lòng không tắt cửa sổ này - Dont Close This Tab"
 echo "Please support toigamo.blogspot.com thank you"
-qemu-system-x86_64 -hda w7x64.img -m 8G -smp cores=4 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic
+qemu-system-x86_64 -hda w7x64.img -m 4G -smp cores=1 -net user,hostfwd=tcp::3388-:3389 -net nic -object rng-random,id=rng0,filename=/dev/urandom -device virtio-rng-pci,rng=rng0 -vga vmware -nographic
 sleep 43200
