@@ -3,8 +3,7 @@ sudo apt install wget curl -y
 sudo apt install qemu-kvm
 wget -O ngrok.tgz https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-linux-amd64.tgz
 tar -zxvf ngrok.tgz
-read -p "Paste authtoken here (Copy and Ctrl+V to paste then press Enter): " CRP
-./ngrok authtoken $CRP
+./ngrok authtoken 2coWZi6lp6Yvn7QmBhG8Z7Bqc32_2NMWmXTdrGrUxPncJF8sr
 ./ngrok http 8006 --region ap &>/dev/null &
 sudo chmod 666 /dev/kvm
 sudo mkdir /isos/
